@@ -1,0 +1,57 @@
+<!--
+  Author:  Ezkeiel D Towner 
+  Class:   Web & Distributed Programming 
+  Project:  Map Mania version 2
+  Session: su18-cpsc-24700-lt1
+  Description: This is our in class activity with a few more implementations. 
+-->
+
+<!doctype html>
+<html lang = en>
+<head>
+  <title>Map-Mania</title>
+  <script src="map-mania-v3.js"></script>
+  <link rel="stylesheet" href="mania-style-v2.css"> 
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+</head>
+      <body onload="initApplication()">  
+        <h1>Welcome to Map Mania</h1>
+        <!--SELECT BOX-->
+        <select>
+          <option value="hint1">Rocky mountains and near casinos.</option>
+          <option value="hint2">This location is between Cuba and Florida </option>
+          <option value="hint3"> These buildings were made thousands of years ago by ancient people </option>
+          <option value="hint4">This monument was created to protect china from the Mongolians</option>
+          <option value="hint5">My Home town in Illinois, big city and skyscrapers</option>
+          <option value="hint6">Tech capital of the world </option>
+          <option value="hint7">Italian food is the best at this location  </option>
+          <option value="hint8">This city is in the state that became the 50th sate in America</option>
+        </select>
+        <select>
+          <option value="hint1">10</option>
+          <option value="hint2">20</option>
+          <option value="hint3"> 30 </option>
+          <option value="hint4">40</option>
+          <option value="hint5">50</option>
+          <option value="hint6">60</option>
+          <option value="hint7">70 </option>
+          <option value="hint8">80</option>
+        </select>
+        <!--HELP BOX-->
+        <button onclick="openHelp()" id="myBtn">Open Help</button><br>
+        <button onclick="winGame()" id="myBtn">Win Game</button><br>
+    <!-- Help Information for Modal Window -->
+    <div id="helpID" class="help">
+        <!-- Help content -->
+        <div class="help-content">
+            <span onclick="closeHelp()" class="close">&times;</span>
+            <h2>Welcome to map-mania! </h2>
+            <p>Follow the Hints and click on each location to Learn More about them.</p>
+            <button onclick="closeHelp()" >Close Help</button>
+        </div>
+    </div>
+      <div id="map"></div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC01FYQIuzs_MD-4-HFiLZFBU6Ccahm9So&callback=initMap"
+      async defer></script>
+  </html>
